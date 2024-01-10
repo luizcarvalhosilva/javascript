@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+
+        div#calc_button {
+            margin-top: 25px;
+            margin-left: 25px;
+        }
+
+        div#res {
+            margin-top: 25px;
+        }
+
+        div input{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <p>Insira abaixo seus números:</p>
+    <input type="number" name="txt_nb1" id="txt_nb1"> 
+    <input type="number" name="txt_nb2" id="txt_nb2">
+    <div id="calc_button">
+        <input type="button" value="Somar" onclick="somar()">
+        <input type="button" value="Subtrair" onclick="subtr()">
+        <input type="button" value="Multiplicar" onclick="mult()">
+        <input type="button" value="Dividir" onclick="divd()">
+    </div>
+   
+    <div id="res">
+        Resultado
+    </div>
+
+    <script>
+        function somar() {
+            var txt_nb1 = document.getElementById("txt_nb1")
+            var txt_nb2 = document.getElementById("txt_nb2")
+            var n1 = Number(txt_nb1.value) 
+            var n2 = Number(txt_nb2.value)
+            res.innerHTML = `Você digitou ${n1} e ${n2}, a soma é <strong>${n1 + n2}</strong>`
+        }
+
+        function subtr() {
+            var txt_nb1 = document.getElementById("txt_nb1")
+            var txt_nb2 = document.getElementById("txt_nb2")
+            var n1 = Number(txt_nb1.value)
+            var n2 = Number(txt_nb2.value)
+            res.innerHTML = `Você digitou ${n1} e ${n2}, a subtração vale <strong>${n1 - n2}.</strong>`
+        }
+        
+        function mult() {
+            var txt_nb1 = document.getElementById("txt_nb1")
+            var txt_nb2 = document.getElementById("txt_nb2")
+            var n1 = Number(txt_nb1.value)
+            var n2 = Number(txt_nb2.value)
+            res.innerHTML = `Você digitou ${n1} e ${n2}, o produto é <strong>${n1 * n2}.</strong>`
+        }
+
+        function divd() {
+            var txt_nb1 = document.querySelector("input#txt_nb1")
+            var txt_nb2 = document.getElementById("txt_nb2")
+            var n1 = Number(txt_nb1.value)
+            var n2 = Number(txt_nb2.value)
+            res.innerHTML = `Você digitou ${n1} e ${n2}, o quociente é <strong>${n1 / n2}.</strong>`
+        }
+    </script>
+</body>
+</html>

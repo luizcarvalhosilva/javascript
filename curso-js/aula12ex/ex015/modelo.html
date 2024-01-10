@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-modelo.css">
+    <title>Verificador de idade</title>
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+    <section>
+        <div>
+            <p>Ano de nascimento:
+                <input type="number" name="year" id="year" min="0">
+            </p>
+            <p> Sexo:
+                <input type="radio" name="radsex" id="masc" checked>
+                <label for="radsex">Masculino</label>
+                <input type="radio" name="radsex" id="femi">
+                <label for="radsex">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+        <div id="result">
+            <p>Preencha os dados acima para ver o resultado.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Não há nada aqui</p>
+    </footer>
+
+    <script src="script-modelo.js"></script>
+</body>
+</html>

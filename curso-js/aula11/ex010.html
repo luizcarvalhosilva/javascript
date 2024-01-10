@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body {
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas.</h1>
+    <div>
+        <p>Digite abaixo a velocidade do veículo.</p>
+        <input type="number" name="velocity" id="velocity"> Km/h
+        <input type="button" value="Verificar" onclick="aplicar()">
+    </div>
+
+    <div id="res">
+        Resultado
+    </div>
+
+    <script>       
+    function aplicar() {
+        var vel_txt = document.getElementById("velocity")
+        var res = document.getElementById("res")
+        var vel_nmb = Number(vel_txt.value)
+        var v_max = 100
+        res.innerHTML = `<p>Sua velocidade foi de <strong>${vel_nmb}Km/h</strong>.</p>`
+        if (v_max / 2 > vel_nmb) {
+            res.innerHTML = `<p>Você foi <strong>MULTADO</strong> por trafegar em velocidade abaixo da permitida para a via.</p>`
+            res.innerHTML += "<p>Dirija com mais <strong>atenção</strong>, obedecendo as leis do CTB.</p>"
+        } 
+        if (vel_nmb > v_max) {
+            res.innerHTML = `<p>Você foi <strong>MULTADO</strong> por trafegar em velocidade acima da máxima permitida para a via.</p>`
+            res.innerHTML += "<p>Dirija com mais cuidado!! No trânsito, não tenha pressa.</p>"
+        }
+        res.innerHTML += "<p>Dirija sempre com cinto de segurança.</p>"
+        }
+    </script>
+</body>
+</html>

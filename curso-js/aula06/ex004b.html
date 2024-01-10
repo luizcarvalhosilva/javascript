@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-size: 30px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var nome = window.prompt("Qual é o seu nome? ")
+        window.alert(`Olá, ${nome}. Insira abaixo 2 números, conforme solicitado.`)
+        var n1 = Number(window.prompt('Digite o primeiro número: '))
+        var n2 = Number(window.prompt('Digite o segundo número: '))
+        /*var soma = n1 + n2*/
+        document.write(`<strong>${nome}</strong>, os números que você inseriu foram: ${n1} e ${n2}.<br> Dessa forma temos que: <br>` )
+        document.write(`A soma é: ${n1 + n2}. <br>`)
+        document.write(`A subtração é: ${n1 - n2}. <br>`)
+        document.write(`A divisão real é: ${n1 / n2}. <br>`)
+        document.write(`A divisão inteira é: ${n1 % n2}. <br>`)
+        document.write(`A multiplicação é: ${n1 * n2}. <br>`)
+        document.write(`A potência primeiro elevado ao segundo é: ${n1 ** n2}. <br>`)
+        document.write(`A potência segundo elevado ao primeiro é:${n2 ** n1}. <br>`)
+    </script>
+</body>
+</html>
